@@ -9,7 +9,7 @@ import { Album } from '../model/album';
 export class AlbumService {
 
   constructor(public http:HttpClient) { }
-  private albumApi:string = "http://jsonplaceholder.typicode.com/albums?userId="
+  private albumApi:string = "https://jsonplaceholder.typicode.com/albums?userId="
 
   get(id:number):Observable<Album[]>{
       return this.http.get<Album[]>(this.albumApi+id)

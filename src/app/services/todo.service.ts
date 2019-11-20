@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class TodoService {
 
   constructor(public http:HttpClient) { }
-  private todoApi:string = "http://jsonplaceholder.typicode.com/todos?userId="
+  private todoApi:string = "https://jsonplaceholder.typicode.com/todos?userId="
 
   get(id:number):Observable<Todo[]>{
       return this.http.get<Todo[]>(this.todoApi+id)

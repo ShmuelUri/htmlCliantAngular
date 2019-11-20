@@ -9,7 +9,7 @@ import { Post } from '../model/post';
 export class PostService {
 
   constructor(public http:HttpClient) { }
-  private postApi:string = "http://jsonplaceholder.typicode.com/posts?userId="
+  private postApi:string = "https://jsonplaceholder.typicode.com/posts?userId="
 
   get(id:number):Observable<Post[]>{
       return this.http.get<Post[]>(this.postApi + id)

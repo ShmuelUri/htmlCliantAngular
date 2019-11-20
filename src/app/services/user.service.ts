@@ -9,7 +9,7 @@ import { User } from '../model/user';
 export class UserService {
 
   constructor(public http:HttpClient) { }
-  private userApi:string = "http://jsonplaceholder.typicode.com/users"
+  private userApi:string = "https://jsonplaceholder.typicode.com/users"
    public currentUser : User ;
 
   get():Observable<User[]>{
