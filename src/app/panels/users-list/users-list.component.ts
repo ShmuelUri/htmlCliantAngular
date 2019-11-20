@@ -18,8 +18,9 @@ export class UsersListComponent implements OnInit {
     this.userSvc.get().subscribe(data =>  this.users = data)
   }
   selectUser(userId:number):void{
-      this.userSvc.getUser(userId).subscribe(data =>  this.userSvc.currentUser = data)
-      setTimeout(()=>{ this.router.navigate(['currentUser'])} ,120)
+      this.userSvc.getUser(userId).subscribe(data =>  {this.userSvc.currentUser = data ;
+                                                          this.router.navigate(['currentUser'])})
+      
      
   }
   
