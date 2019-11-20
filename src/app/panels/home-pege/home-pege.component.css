@@ -1,0 +1,7 @@
+.home{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    text-align: center
+}

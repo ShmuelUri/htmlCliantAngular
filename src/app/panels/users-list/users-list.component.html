@@ -1,0 +1,5 @@
+<div class="header">
+    <ul>
+        <li *ngFor = "let user of users" (click) = "selectUser(user.id)">{{user.name}}</li>
+    </ul>
+</div>
